@@ -1,6 +1,6 @@
-# TinyCap Changelog & Feature Overview
+# DevPeek Changelog & Feature Overview
 
-TinyCap is a local HTTP(S) traffic debugging tool. Once the proxy is enabled, it captures and lists requests from browsers, mobile devices, or other clients, allowing inspection of request/response data for API debugging and protocol analysis.
+DevPeek is a mobile WebView debugging and traffic inspection toolkit focused on runtime debugging, JavaScript injection, and page-level inspection workflows.
 
 This document focuses on **UI and functional changes per version**. For implementation details, please refer to the repository history.
 
@@ -11,12 +11,13 @@ This document focuses on **UI and functional changes per version**. For implemen
 ### Settings (Top-right Gear Menu)
 
 - **Developer Tools**: Now available even in packaged builds. Used for viewing errors and copying console logs.
-- **Open Config Directory**: Opens the local folder where TinyCap stores settings and global scripts. Useful for backup, migration, or manual inspection. If no configuration exists yet, it will be created automatically before opening.
+- **Open Config Directory**: Opens the local folder where DevPeek stores settings and global scripts. Useful for backup, migration, or manual inspection. If no configuration exists yet, it will be created automatically before opening.
 
-### Capture & Scripts
+### Runtime & Scripts
 
 - **Global Scripts**: Fixed an issue where scripts might not take effect when breakpoints were enabled or previously configured.
 - **Breakpoints**: Improved stability to reduce unexpected behavior caused by invalid or abnormal breakpoint configurations.
+- Improved runtime hook initialization stability for injected debugging scripts.
 
 ### Request Details
 
@@ -49,6 +50,7 @@ Improved consistency between light and dark themes across the entire UI.
 - Right-side panels (Elements / Console / Network / Session) now follow theme styles.
 - Improved readability of trees, logs, and request data.
 - Device preview area now adapts visually to theme.
+- Better runtime console readability for injected logs and script output.
 
 ### Replay
 
@@ -66,7 +68,7 @@ UI and menu restructuring.
 
 ### Settings & About
 
-- “Version Changelog” and “About TinyCap” are now separate entries.
+- “Version Changelog” and “About DevPeek” are now separate entries.
 - Changelog is prioritized above About.
 - About window shows version, runtime environment, and basic tech stack information.
 
@@ -74,7 +76,7 @@ UI and menu restructuring.
 
 ## 1.0.1
 
-Improvements in debugging preview, extension workflow, and replay stability.
+Improvements in runtime debugging preview, extension workflow, and replay stability.
 
 ### Debug Preview
 
@@ -83,6 +85,7 @@ Improvements in debugging preview, extension workflow, and replay stability.
 - Console and network data are displayed more accurately.
 - Local page debugging no longer forces proxy interception, reducing unnecessary routing issues.
 - Fixed scroll and layout issues in mirrored view.
+- Improved runtime injection stability in WebView environments.
 
 ### Request List & Details
 
@@ -94,7 +97,7 @@ Improvements in debugging preview, extension workflow, and replay stability.
 
 - Added guidance for Chrome extension installation.
 - Fixed replay timeline synchronization issues.
-- Supports `tinycap://` protocol for external launch.
+- Supports `devpeek://` protocol for external launch.
 
 ### Session & Replay
 
@@ -108,10 +111,12 @@ Improvements in debugging preview, extension workflow, and replay stability.
 
 First public release.
 
-### Capture & Traffic
+### Capture & Runtime Inspection
 
 - Local HTTP(S) proxy server (default port: 8888).
 - Captures HTTP/HTTPS requests from proxied devices.
+- Runtime inspection for mobile WebView environments.
+- JavaScript injection support for debugging workflows.
 - SSL decryption enabled by default using a generated CA certificate (for authorized use only).
 - Request inspection: headers, body, response, and overview.
 - Per-client IP filtering and session separation.
@@ -134,9 +139,10 @@ First public release.
 - Request/response breakpoints with rule-based control.
 - Throttling simulation (latency, bandwidth limits).
 
-### Global Scripts
+### Global Scripts & Runtime Hooks
 
 - Script injection at different request lifecycle stages.
+- Runtime JavaScript hook support.
 - Script logs available in dedicated window.
 
 ### UI & Preferences
@@ -145,9 +151,11 @@ First public release.
 - Language support.
 - Proxy port auto-restart on change.
 
-### Replay
+### Replay & Remote Debugging
 
 - Request replay from history with independent window support.
+- Device preview and mirrored debugging foundation.
+- Remote debugging workflow support.
 
 ### Collaboration & Extension
 
@@ -162,3 +170,11 @@ First public release.
 
 - Automatic proxy start sequence.
 - Graceful shutdown with proxy cleanup and certificate service stop.
+
+---
+
+## License
+
+DevPeek is proprietary software.
+
+All rights reserved.
