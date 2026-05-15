@@ -1,8 +1,8 @@
-# TinyCap
+# DevPeek
 
-Packet capture and remote debugging tool for mobile WebView and Hybrid Apps.
+Packet capture and remote debugging toolkit for mobile WebView and Hybrid Apps.
 
-TinyCap focuses on mobile WebView debugging, runtime inspection, JavaScript injection, and page-level debugging experience.
+DevPeek focuses on mobile WebView inspection, runtime debugging, JavaScript injection, and page-level debugging workflows.
 
 ---
 
@@ -16,19 +16,21 @@ TinyCap focuses on mobile WebView debugging, runtime inspection, JavaScript inje
 - Page-level debugging
 - Remote debugging foundation
 - Hybrid App debugging support
+- Runtime environment inspection
+- DevTools-style debugging workflow
 
 ---
 
-## Why TinyCap
+## Why DevPeek
 
-Traditional proxy tools are great for:
+Traditional proxy tools are excellent for:
 
 - HTTP analysis
 - HTTPS interception
 - API debugging
 - Network inspection
 
-But debugging mobile WebView and Hybrid Apps is still painful.
+But debugging mobile WebView and Hybrid Apps is still difficult.
 
 Especially when working with:
 
@@ -41,11 +43,11 @@ Especially when working with:
 
 In many cases, developers do not want:
 
-> Global device traffic
+> Full device traffic capture
 
 They want:
 
-> Current page context
+> Current page runtime visibility
 
 Including:
 
@@ -55,33 +57,37 @@ Including:
 - DOM interaction
 - JavaScript execution
 - WebView environment
+- Runtime hooks
+- Injection-based debugging
 
-TinyCap is designed around:
+DevPeek is designed around:
 
-**Proxy + Injection + Remote Debugging**
+**Proxy + Runtime Injection + Remote Debugging**
 
-instead of only packet capture.
+instead of traditional packet capture only.
 
 ---
 
 ## Vision
 
-TinyCap aims to provide a DevTools-like debugging experience for mobile WebView.
+DevPeek aims to provide a DevTools-like debugging experience for mobile WebView and Hybrid runtime environments.
 
 The project is evolving toward:
 
 - Runtime inspection
 - Remote page debugging
 - WebView DevTools
+- DOM inspection
 - Page-level traffic analysis
-- JavaScript runtime hook
+- JavaScript runtime hooks
+- Remote console debugging
 - Mobile debugging workflow optimization
 
 ---
 
 ## Current Status
 
-TinyCap is under active development.
+DevPeek is under active development.
 
 Some features are still experimental and evolving.
 
@@ -105,6 +111,7 @@ Download the latest version from the **Releases** page.
 - Flutter WebView debugging
 - uni-app debugging
 - Mobile frontend developers
+- Mobile debugging engineers
 
 ---
 
@@ -115,12 +122,13 @@ Download the latest version from the **Releases** page.
 - Enhanced WebView debugging
 - Page-level request filtering
 - DevTools-style inspection workflow
-- Mobile debugging improvements
+- Remote JavaScript execution
+- Cross-device debugging improvements
 
 ---
 
 ## License
 
-TinyCap is proprietary software.
+DevPeek is proprietary software.
 
 All rights reserved.
